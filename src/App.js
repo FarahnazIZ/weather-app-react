@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Forecast from "./Forecast";
 import "./App.css";
 
 function App(props) {
@@ -17,6 +18,8 @@ function App(props) {
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
+      latitude: response.data.coord.lat,
+      longtitude: response.data.coord.long,
     });
   }
 
@@ -70,6 +73,12 @@ function App(props) {
           <div className="col-6 info-style">
             <div>Wind: {Math.round(weather.wind)}km/h</div>
             <div>Humidity: {weather.humidity}%</div>
+          </div>
+          <div>
+            <Forecast
+              latitude={weather.latitude}
+              longtitude={weather.longtitude}
+            />
           </div>
         </div>
       </div>
