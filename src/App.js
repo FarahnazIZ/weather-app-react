@@ -19,7 +19,7 @@ function App(props) {
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
       latitude: response.data.coord.lat,
-      longtitude: response.data.coord.long,
+      longtitude: response.data.coord.lon,
     });
   }
 
