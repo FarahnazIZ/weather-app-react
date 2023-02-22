@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import DateCalculator from "./DateCalculator";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -15,7 +16,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
-      date: "Wednesday, 22:22",
+      date: new Date(response.data.dt * 1000),
       latitude: response.data.coord.lat,
       longtitude: response.data.coord.lon,
     });
@@ -55,7 +56,9 @@ export default function Weather(props) {
       <div className="Weather container border">
         {form}
         <h1>{weather.name}</h1>
-        <div className="info-style">{weather.date}</div>
+        <div className="info-style">
+          <DateCalculator date={weather.date} />
+        </div>
         <div className="info-style text-capitalize">{weather.description}</div>
         <div className="row">
           <div className="col-6">
