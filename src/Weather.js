@@ -57,7 +57,7 @@ export default function Weather(props) {
 
   if (weather.ready) {
     return (
-      <div className="Weather container border">
+      <div className="Weather border">
         {form}
         <WeatherInformation data={weather} />
       </div>
