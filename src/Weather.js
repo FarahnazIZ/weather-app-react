@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import DateCalculator from "./DateCalculator";
+import WeatherInformation from "./WeatherInformation";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -55,27 +55,7 @@ export default function Weather(props) {
     return (
       <div className="Weather container border">
         {form}
-        <h1>{weather.name}</h1>
-        <div className="info-style">
-          <DateCalculator date={weather.date} />
-        </div>
-        <div className="info-style text-capitalize">{weather.description}</div>
-        <div className="row">
-          <div className="col-6">
-            <img
-              src={weather.icon}
-              className="pb-md-4"
-              alt={weather.description}
-            />
-            <span className="temp-style">
-              {Math.round(weather.temperature)}℃
-            </span>
-          </div>
-          <div className="col-6 info-style">
-            <div>Wind: {Math.round(weather.wind)}km/h</div>
-            <div>Humidity: {weather.humidity}%</div>
-          </div>
-        </div>
+        <WeatherInformation data={weather} />
       </div>
     );
   } else {
