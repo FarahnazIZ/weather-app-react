@@ -58,7 +58,7 @@ export default function Weather(props) {
 
   if (info) {
     return (
-      <div className="App container border">
+      <div className="Weather container border">
         {form}
         <h1>{weather.name}</h1>
         <div className="info-style">{weather.description}</div>
@@ -78,7 +78,7 @@ export default function Weather(props) {
     );
   } else {
     return (
-      <div className="App container">
+      <div className="Weather container">
         {form}
         <h1>{start("Singapore")}</h1>
       </div>
