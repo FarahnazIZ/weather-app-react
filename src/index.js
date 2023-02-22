@@ -10,23 +10,6 @@ root.render(
   <React.StrictMode>
     <div className="container">
       <App />
-      <div className="text-center mt-3">
-        <a
-          href="https://github.com/FarahnazIZ/weather-app-react"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Open-source code
-        </a>
-        , by{" "}
-        <a
-          href="https://curious-flan-f035bf.netlify.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Farahnaz Izadi
-        </a>
-      </div>
     </div>
   </React.StrictMode>
 );

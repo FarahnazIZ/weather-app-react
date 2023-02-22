@@ -1,15 +1,1 @@
-.App {
-  max-width: 600px;
-  margin-top: 100px;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-}
 
-.App .info-style {
-  font-size: 24px;
-}
-
-.App .temp-style {
-  font-size: 64px;
-}
