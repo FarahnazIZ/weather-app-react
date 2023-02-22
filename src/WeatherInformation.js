@@ -1,5 +1,6 @@
 import React from "react";
 import DateCalculator from "./DateCalculator";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInformation(props) {
   return (
@@ -12,11 +13,7 @@ export default function WeatherInformation(props) {
       <div className="container p-0">
         <div className="row">
           <div className="col-6 text-start">
-            <img
-              src={props.data.icon}
-              className="pb-md-4"
-              alt={props.data.description}
-            />
+            <WeatherIcon code={props.data.icon} />
             <span className="temp-style">
               {Math.round(props.data.temperature)}
             </span>
