@@ -12,6 +12,12 @@
   font-size: 64px;
 }
 
+.Weather canvas {
+  position: relative;
+  top: 10px;
+  margin-right: 10px;
+}
+
 .Weather .unit {
   font-size: 18px;
   position: relative;
