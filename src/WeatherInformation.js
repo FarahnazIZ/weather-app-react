@@ -1,6 +1,7 @@
 import React from "react";
 import DateCalculator from "./DateCalculator";
 import WeatherIcon from "./WeatherIcon";
+import TemperatureConvertor from "./TemperatureConvertor";
 
 export default function WeatherInformation(props) {
   return (
@@ -14,10 +15,7 @@ export default function WeatherInformation(props) {
         <div className="row">
           <div className="col-6 text-start">
             <WeatherIcon code={props.data.icon} />
-            <span className="temp-style">
-              {Math.round(props.data.temperature)}
-            </span>
-            <span className="unit">℃</span>
+            <TemperatureConvertor temperature={props.data.temperature} />
           </div>
           <div className="col-6 text-start info-style">
             <div>Wind: {Math.round(props.data.wind)}km/h</div>

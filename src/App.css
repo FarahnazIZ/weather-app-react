@@ -2,3 +2,11 @@
   max-width: 600px;
   margin: 50px auto;
 }
+
+.App a {
+  text-decoration: none;
+}
+
+.App a:hover {
+  text-decoration: underline;
+}
