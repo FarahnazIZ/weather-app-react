@@ -18,7 +18,7 @@ export default function WeatherInformation(props) {
             <TemperatureConvertor temperature={props.data.temperature} />
           </div>
           <div className="col-6 text-start info-style">
-            <div>Wind: {Math.round(props.data.wind)}km/h</div>
+            <div>Wind: {Math.round(props.data.wind)} km/h</div>
             <div>Humidity: {props.data.humidity}%</div>
           </div>
         </div>
