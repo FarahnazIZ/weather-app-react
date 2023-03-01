@@ -14,7 +14,9 @@ export default function WeatherInformation(props) {
       <div className="container p-0">
         <div className="row">
           <div className="col-6 text-start">
-            <WeatherIcon code={props.data.icon} />
+            <span className="me-2">
+              <WeatherIcon code={props.data.icon} size={64} />
+            </span>
             <TemperatureConvertor temperature={props.data.temperature} />
           </div>
           <div className="col-6 text-start info-style">

@@ -1,4 +1,7 @@
+import React from "react";
 import axios from "axios";
+import WeatherIcon from "./WeatherIcon";
+import "./Forecast.css";
 
 export default function Forecast(props) {
   let longtitude = props.longtitude;
@@ -17,12 +20,25 @@ export default function Forecast(props) {
   function displayForecast(response) {
     let forecastItems = response.data.daily;
 
-    forecastItems.forEach((day, index) => {
+    forecastItems.mapping((day, index) => {
       if (index < 6) {
         return callDay(day.time);
       }
     });
   }
 
-  return <div>{displayForecast}</div>;
+  return (
+    <div className="Forecast">
+      <div className="row">
+        <div className="col">
+          <div>Wed</div>
+          <WeatherIcon code="01d" size={32} />
+          <div className="mt-3">
+            <span className="max-temperature">19°</span>
+            <span className="min-temperature">15°</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
