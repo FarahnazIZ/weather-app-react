@@ -5,10 +5,11 @@ import "./Forecast.css";
 
 export default function Forecast(props) {
   const [ready, setReady] = useState(false);
+  const [forecast, setForecast] = useState(null);
 
   function displayForecast(response) {
-    console.log(response.data);
     setReady(true);
+    setForecast(response.data.daily);
   }
 
   function callDay(timestamp) {
@@ -24,7 +25,7 @@ export default function Forecast(props) {
         <div className="row">
           <div className="col">
             <div>Wed</div>
-            <WeatherIcon code="01d" size={32} />
+            <WeatherIcon code="mist-night" size={32} />
             <div className="mt-3">
               <span className="max-temperature">19°</span>
               <span className="min-temperature">15°</span>
@@ -34,10 +35,10 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    let longtitude = props.coordinates.lon;
-    let latitude = props.coordinates.lat;
-    let apiKey = "2065f51b78f51fb9f65c3557ebb73d5b";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longtitude}&appid=${apiKey}&units=metric`;
+    let longtitude = props.coordinates.longtitude;
+    let latitude = props.coordinates.latitude;
+    let apiKey = "892435254bc5d7b0f0663663abo3t153";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longtitude}&lat=${latitude}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayForecast);
 
     return null;
