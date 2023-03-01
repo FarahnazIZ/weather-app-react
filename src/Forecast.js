@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import WeatherIcon from "./WeatherIcon";
+import ForecastInformation from "./ForecastInformation";
 import "./Forecast.css";
 
 export default function Forecast(props) {
@@ -24,21 +24,16 @@ export default function Forecast(props) {
       <div className="Forecast">
         <div className="row">
           <div className="col">
-            <div>Wed</div>
-            <WeatherIcon code="mist-night" size={32} />
-            <div className="mt-3">
-              <span className="max-temperature">19°</span>
-              <span className="min-temperature">15°</span>
-            </div>
+            <ForecastInformation data={forecast[0]} />
           </div>
         </div>
       </div>
     );
   } else {
-    let longtitude = props.coordinates.longtitude;
+    let longitude = props.coordinates.longitude;
     let latitude = props.coordinates.latitude;
     let apiKey = "892435254bc5d7b0f0663663abo3t153";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longtitude}&lat=${latitude}&key=${apiKey}&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayForecast);
 
     return null;
