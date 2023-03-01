@@ -4,8 +4,12 @@ import WeatherIcon from "./WeatherIcon";
 import "./Forecast.css";
 
 export default function Forecast(props) {
-  let longtitude = props.longtitude;
-  let latitude = props.latitude;
+  function displayForecast(response) {
+    console.log(response);
+  }
+
+  let longtitude = props.coordinates.lon;
+  let latitude = props.coordinates.lat;
   let apiKey = "2065f51b78f51fb9f65c3557ebb73d5b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longtitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -15,16 +19,6 @@ export default function Forecast(props) {
     let day = date.getDate();
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return days[day];
-  }
-
-  function displayForecast(response) {
-    let forecastItems = response.data.daily;
-
-    forecastItems.mapping((day, index) => {
-      if (index < 6) {
-        return callDay(day.time);
-      }
-    });
   }
 
   return (

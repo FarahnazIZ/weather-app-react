@@ -18,8 +18,7 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
-      latitude: response.data.coord.lat,
-      longtitude: response.data.coord.lon,
+      coordinates: response.data.coord,
     });
   }
 
@@ -61,14 +60,14 @@ export default function Weather(props) {
       <div className="Weather border">
         {form}
         <WeatherInformation data={weather} />
-        <Forecast />
+        <Forecast coordinates={weather.coordinates} />
       </div>
     );
   } else {
     search();
 
     return (
-      <div class="d-flex justify-content-center">
+      <div className="d-flex justify-content-center">
         <div className="spinner-border mt-5" role="status"></div>
       </div>
     );
