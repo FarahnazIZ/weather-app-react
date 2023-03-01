@@ -12,20 +12,21 @@ export default function Forecast(props) {
     setForecast(response.data.daily);
   }
 
-  function callDay(timestamp) {
-    let date = new Date(timestamp * 1000);
-    let day = date.getDate();
-    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    return days[day];
-  }
-
   if (ready) {
     return (
       <div className="Forecast">
         <div className="row">
-          <div className="col">
-            <ForecastInformation data={forecast[0]} />
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  <ForecastInformation data={dailyForecast} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
         </div>
       </div>
     );
