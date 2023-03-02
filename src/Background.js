@@ -5,7 +5,7 @@ export default function Background(props) {
   return (
     <div className="Background">
       <div className="overlay"></div>
-      <img src={image} />
+      <img src={image} alt="" />
     </div>
   );
 }
