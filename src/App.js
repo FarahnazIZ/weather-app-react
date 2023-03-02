@@ -1,11 +1,13 @@
 import React from "react";
 import Weather from "./Weather";
 import "./App.css";
+import Background from "./Background";
 
 export default function App() {
   return (
     <div className="App">
-      <div className="container">
+      <Background />
+      <div className="content">
         <Weather defaultCity="Singapore" />
         <div className="text-center mt-3">
           <a
