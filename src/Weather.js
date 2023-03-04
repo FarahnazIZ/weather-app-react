@@ -3,6 +3,7 @@ import axios from "axios";
 import WeatherInformation from "./WeatherInformation";
 import Forecast from "./Forecast";
 import "./Weather.css";
+import Background from "./Background";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -57,10 +58,13 @@ export default function Weather(props) {
 
   if (weather.ready) {
     return (
-      <div className="Weather border">
-        {form}
-        <WeatherInformation data={weather} />
-        <Forecast coordinates={weather.coordinates} />
+      <div className="Weather">
+        <Background data={weather.icon} />
+        <div className="content">
+          {form}
+          <WeatherInformation data={weather} />
+          <Forecast coordinates={weather.coordinates} />
+        </div>
       </div>
     );
   } else {
