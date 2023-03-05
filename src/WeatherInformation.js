@@ -11,7 +11,7 @@ export default function WeatherInformation(props) {
         <DateCalculator date={props.data.date} />
       </div>
       <div className="info-style text-capitalize">{props.data.description}</div>
-      <div className="container p-0">
+      <div className="p-0">
         <div className="row">
           <div className="col-6 text-start">
             <span className="me-2">

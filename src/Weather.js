@@ -59,11 +59,19 @@ export default function Weather(props) {
   if (weather.ready) {
     return (
       <div className="Weather">
-        <Background data={weather.icon} />
-        <div className="content">
-          {form}
-          <WeatherInformation data={weather} />
-          <Forecast coordinates={weather.coordinates} />
+        <div className="container">
+          <div className="row">
+            <div className="col-8 p-0">
+              <Background data={weather.icon} />
+              <div className="content">
+                {form}
+                <WeatherInformation data={weather} />
+              </div>
+            </div>
+            <div className="col-4 p-0">
+              <Forecast coordinates={weather.coordinates} />
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -14,7 +14,7 @@ export default function ForecastInformation(props) {
 
   function callDay() {
     let date = new Date(props.data.time * 1000);
-    let day = date.getDate();
+    let day = date.getDay();
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return days[day];
   }
@@ -23,7 +23,7 @@ export default function ForecastInformation(props) {
     <div className="ForecastInformation">
       <div>{callDay()}</div>
       <WeatherIcon code={props.data.condition.icon} size={32} />
-      <div className="mt-3">
+      <div className="mt-2 mb-3">
         <span className="max-temperature">{maxTemperature()}</span>
         <span className="min-temperature">{minTemperature()}</span>
       </div>
