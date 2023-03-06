@@ -1,7 +1,60 @@
+.App {
+  background-color: #50544e;
+  color: #e9eddf;
+}
+
 .App a {
   text-decoration: none;
+  color: #f5cb5b;
 }
 
 .App a:hover {
   text-decoration: underline;
+  color: #f5cb5b;
+}
+
+.App .btn {
+  color: #333532;
+  background-color: #f5cb5b;
+}
+
+.App .btn:hover {
+  background-color: #333532;
+  color: #f5cb5b;
+  border: solid 1px #f5cb5b;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App .container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App .left-content {
+  width: 30%;
+  height: 600px;
+}
+
+.App .right-content {
+  width: 50%;
+  min-height: 400px;
+  background-color: #333532;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  margin-left: -100px;
+  border-radius: 10px;
+}
+
+.App footer {
+  padding-bottom: 20px;
 }

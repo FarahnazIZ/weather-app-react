@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="App">
       <Weather defaultCity="Singapore" />
-      <div className="text-center mt-3">
+      <footer className="text-center">
         <a
           href="https://github.com/FarahnazIZ/weather-app-react"
           target="_blank"
@@ -22,7 +22,7 @@ export default function App() {
         >
           Farahnaz Izadi
         </a>
-      </div>
+      </footer>
     </div>
   );
 }

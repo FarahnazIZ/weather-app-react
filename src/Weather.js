@@ -47,32 +47,25 @@ export default function Weather(props) {
         onChange={displayCity}
         autoFocus="on"
       />
-      <input
-        type="submit"
-        className="btn btn-primary"
-        id="basic-addon2"
-        value="Search"
-      />
+      <input type="submit" className="btn" id="basic-addon2" value="Search" />
     </form>
   );
 
   if (weather.ready) {
     return (
       <div className="Weather">
-        <div className="container">
-          <div className="row">
-            <div className="col-8 p-0">
+        <section>
+          <div className="container">
+            <div className="left-content">
               <Background data={weather.icon} />
-              <div className="content">
-                {form}
-                <WeatherInformation data={weather} />
-              </div>
             </div>
-            <div className="col-4 p-0">
+            <div className="right-content p-4">
+              {form}
+              <WeatherInformation data={weather} />
               <Forecast coordinates={weather.coordinates} />
             </div>
           </div>
-        </div>
+        </section>
       </div>
     );
   } else {

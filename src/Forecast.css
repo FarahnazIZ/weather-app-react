@@ -1,10 +1,5 @@
 .Forecast {
   text-align: center;
-  background-color: black;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding-bottom: 20px;
-  padding-top: 20px;
 }
 
 .Forecast .min-temperature {
