@@ -1,27 +1,27 @@
 .App {
-  background-color: #50544e;
-  color: #e9eddf;
+  background-color: #9b9d9d;
+  color: #5f5e5d;
 }
 
 .App a {
   text-decoration: none;
-  color: #f5cb5b;
+  color: #f53d01;
 }
 
 .App a:hover {
   text-decoration: underline;
-  color: #f5cb5b;
+  color: #f53d01;
 }
 
 .App .btn {
-  color: #333532;
-  background-color: #f5cb5b;
+  color: #d8dee2;
+  background-color: #5f5e5d;
 }
 
 .App .btn:hover {
-  background-color: #333532;
-  color: #f5cb5b;
-  border: solid 1px #f5cb5b;
+  background-color: #d8dee2;
+  color: #5f5e5d;
+  border: solid 1px #5f5e5d;
 }
 
 section {
@@ -49,7 +49,7 @@ section {
 .App .right-content {
   width: 50%;
   min-height: 400px;
-  background-color: #333532;
+  background-color: #d8dee2;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   margin-left: -100px;
   border-radius: 10px;
