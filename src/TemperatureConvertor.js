@@ -19,9 +19,9 @@ export default function TemperatureConvertor(props) {
 
   if (unit === "celsius") {
     return (
-      <div className="TemperatureConvertor d-inline">
+      <div className="TemperatureConvertor d-block d-sm-inline ">
         <span className="temp-style">{Math.round(props.temperature)}</span>
-        <span className="unit">
+        <span className="position-relative unit">
           °C |{" "}
           <a href="/" onClick={convertToFahrenheit}>
             °F

@@ -3,7 +3,7 @@
 }
 
 .Weather .temp-style {
-  font-size: 64px;
+  font-size: 48px;
 }
 
 .Weather canvas {
@@ -12,8 +12,7 @@
 }
 
 .Weather .unit {
-  font-size: 18px;
-  position: relative;
+  font-size: 12px;
   top: -30px;
 }
 

@@ -60,7 +60,7 @@ export default function Weather(props) {
             <div className="left-content">
               <Background data={weather.icon} />
             </div>
-            <div className="right-content p-4">
+            <div className="right-content">
               {form}
               <WeatherInformation data={weather} />
               <Forecast coordinates={weather.coordinates} />
