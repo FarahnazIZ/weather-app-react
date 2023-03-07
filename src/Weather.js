@@ -4,6 +4,7 @@ import WeatherInformation from "./WeatherInformation";
 import Forecast from "./Forecast";
 import "./Weather.css";
 import Background from "./Background";
+import { RotatingLines } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -72,8 +73,14 @@ export default function Weather(props) {
     search();
 
     return (
-      <div className="d-flex justify-content-center">
-        <div className="spinner-border mt-5" role="status"></div>
+      <div className="spinner">
+        <RotatingLines
+          strokeColor="grey"
+          strokeWidth="5"
+          animationDuration="0.75"
+          width="96"
+          visible={true}
+        />
       </div>
     );
   }
